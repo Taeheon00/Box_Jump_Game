@@ -9,7 +9,6 @@ public:
     GL_Engine::vec2 quad2[4];
     GL_Engine::vec3 color;
     bool gameover = false;
-    bool pass = false;
 
     Wall(GL_Engine::vec3 col)
     {
