@@ -18,8 +18,8 @@ namespace GameManner
 {
 	Player* p = new Player(GL_Engine::vec3(1.0f, 0.0f, 0.0f));
 	Wall* w = new Wall(GL_Engine::vec3(0.0f, 0.0f, 1.0f));
-	Wall2* w2 = new Wall2(GL_Engine::vec3(0.0f, 1.0f, 1.0f));
-	Wall3* w3 = new Wall3(GL_Engine::vec3(1.0f, 0.0f, 1.0f));
+	Wall2* w2 = new Wall2(GL_Engine::vec3(0.0f, 0.0f, 1.0f));
+	Wall3* w3 = new Wall3(GL_Engine::vec3(0.0f, 0.0f, 1.0f));
 	GameOver* g = new GameOver(GL_Engine::vec3(1.0f, 1.0f, 0.0f));
 
 	typedef struct tagBITMAPHEADER {

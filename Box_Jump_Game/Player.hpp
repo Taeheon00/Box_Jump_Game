@@ -35,7 +35,7 @@ public:
         else
         {
             coord.y = 0.005f;
-            if (quad[2].y >= 0.4f)
+            if (quad[2].y >= 0.8f)
             {
                 coord.y = 0.0f;
             }
@@ -51,11 +51,6 @@ public:
         else
         {
             coord.y = -0.005f;
-
-            if (quad[2].y <= -1.0f)
-            {
-                coord.y = 0.0f;
-            }
         }
     }
 
@@ -63,10 +58,10 @@ public:
     {
         size = 0.1f;
 
-        quad[0] = GL_Engine::vec2(size, size);
-        quad[1] = GL_Engine::vec2(size, -size);
-        quad[2] = GL_Engine::vec2(-size, size);
-        quad[3] = GL_Engine::vec2(-size, -size);
+        quad[0] = GL_Engine::vec2(-size, size);
+        quad[1] = GL_Engine::vec2(size, size);
+        quad[2] = GL_Engine::vec2(-size, -size);
+        quad[3] = GL_Engine::vec2(size, -size);
     }
 
     void Render()
