@@ -56,12 +56,7 @@ namespace GameManner
 
 	class GameLoop
 	{
-	private:
-		bool _isGameRunning;
-
 	public:
-		GameLoop() { }
-		~GameLoop() {}
 		bool w2pass = false;
 
 		static void error_callback(int error, const char* description)
@@ -82,7 +77,7 @@ namespace GameManner
 			{
 				exit(EXIT_FAILURE);
 			}
-			window = glfwCreateWindow(700, 600, "Simple example", NULL, NULL);
+			window = glfwCreateWindow(700, 600, "Box_Jump_Game", NULL, NULL);
 			if (!window)
 			{
 				glfwTerminate();
