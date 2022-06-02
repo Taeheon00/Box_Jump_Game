@@ -9,6 +9,8 @@ Wall* w = new Wall(GL_Engine::vec3(0.0f, 0.0f, 1.0f));
 Wall2* w2 = new Wall2(GL_Engine::vec3(0.0f, 0.0f, 1.0f));
 Wall3* w3 = new Wall3(GL_Engine::vec3(0.0f, 0.0f, 1.0f));
 
+static GLuint texName;
+
 class GameOver {
 public:
     GL_Engine::vec2 coord;
@@ -49,6 +51,10 @@ public:
         quad[1] = quad[1] + coord;
         quad[2] = quad[2] + coord;
         quad[3] = quad[3] + coord;
+
+        glEnable(GL_TEXTURE_2D);
+        glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+        glBindTexture(GL_TEXTURE_2D, texName);
 
         glBegin(GL_TRIANGLES);
         glColor4f(color.x, color.y, color.z, alpha);

@@ -14,8 +14,6 @@
 
 using namespace std;
 
-static GLuint texName;
-
 namespace GameManner
 {
 	Player* p = new Player(GL_Engine::vec3(1.0f, 0.0f, 0.0f));
@@ -132,7 +130,7 @@ namespace GameManner
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
 				GL_NEAREST);
 
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 512, 512, 0, GL_RED, 1, image);
+			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 512, 512, 0, GL_GREEN, GL_UNSIGNED_BYTE, image);
 		}
 		void Release(GLFWwindow* window)
 		{
@@ -283,9 +281,6 @@ namespace GameManner
 			ratio = width / (float)height;
 
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			glEnable(GL_TEXTURE_2D);
-			glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
-			glBindTexture(GL_TEXTURE_2D, texName);
 
 			p->Render();
 			w->Render();
